@@ -2,9 +2,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	let body = document.querySelector("body")
-	let content = document.querySelector("#content")
+	let wrap = document.querySelector("#wrapper")
 
-	
 })
 
 
