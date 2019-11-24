@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	let body = document.querySelector("body")
 	let wrap = document.querySelector("#wrapper")
 
+    
+
 })
 
 

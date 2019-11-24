@@ -1,7 +1,19 @@
+@font-face {
+	font-family: "LouisGeorgeCafe";
+	src: url("fonts/Louis George Cafe.ttf");
+}
+@font-face {
+	font-family: "LouisGeorgeCafe";
+	src: url("fonts/Louis George Cafe Bold.ttf");
+	font-weight: bold;
+}
+
+
 * {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: LouisGeorgeCafe;
+	list-style: none;
 }
 
 #wrapper {
@@ -18,19 +30,19 @@
 
 .side-img {
 	background-color: blue;
-	flex: 1;
+	width: 32vw;
 }
 
 .content {
 	display: flex;
 	flex-direction: column;
-	flex: 2;
+	flex: auto;
 }
 
 h1 {
 	align-self: center;
-	margin-top: 4vh;
-	font-size: 4vh;
+	margin-top: 2vh;
+	font-size: 4vw;
 }
 
 #contact {
