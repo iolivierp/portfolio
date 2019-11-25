@@ -4,11 +4,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	let body = document.querySelector("body")
 	let wrap = document.querySelector("#wrapper")
 
-    
+	window.addEventListener('wheel', scrollBlock, false)
+
 
 })
 
+function scrollBlock(event) {
+	let dir = event.deltaY / Math.abs(event.deltaY)
 
+	console.log(dir)
+
+	setTimeout(function() {
+		console.log("end")
+		window.addEventListener('wheel', scrollBlock, false)
+	}, 1000)
+	window.removeEventListener('wheel', arguments.callee, false)
+}
 
 function create(tag, text, parent, classs=null, id=null) {
     let o = document.createElement(tag)
