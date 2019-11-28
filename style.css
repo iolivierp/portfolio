@@ -16,12 +16,12 @@
 	scroll-behavior: smooth;
 }
 
-body>div:first-child {
-	display: none;
+html {
+	overflow: hidden;
 }
 
-body {
-	overflow: hidden;
+body>div:first-child {
+	display: none;
 }
 
 #wrapper {

@@ -32,7 +32,7 @@ function scrollBlock(event) {
 
 	setTimeout(function() {
 		window.addEventListener('wheel', scrollBlock, false)
-	}, 300)
+	}, 400)
 	window.removeEventListener('wheel', arguments.callee, false)
 }
 
