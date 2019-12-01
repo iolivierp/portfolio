@@ -43,7 +43,7 @@ label {
 	margin-bottom: 0.3vh;
 }
 
-input,textarea {
+input,textarea,button {
 	font-size: 2vh;
 	background-color: transparent;
 	border: solid 3px transparent;
@@ -54,6 +54,19 @@ input,textarea {
 
 textarea {
 	background-color: #242424;
+}
+
+button {
+	background-color: #202020;
+	width: 50%;
+	align-self: center;
+}
+
+button:hover {
+	border-radius: 8px;
+	background-color: orange;
+	font-weight: bold;
+	box-shadow: 5px 5px #202020;
 }
 
 
@@ -113,7 +126,7 @@ textarea {
 	border-radius: 5px;
 	background-color: orange;
 	height: 100%;
-	transition: all 0.7s ease;
+	transition: all 0.9s cubic-bezier(.17,.84,.44,1);
 	width: 0;
 }
 
@@ -134,10 +147,12 @@ textarea {
 	margin: 10px;
 	background-size: contain;
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 
 #desc {
-	width: 40vw;
+	width: 36vw;
+	padding: 2vw;
 	background-color: green;
 }
 
@@ -178,6 +193,11 @@ textarea {
 	align-items: center;
 }
 
+#more {
+	font-size: 4vh;
+	text-align: right;
+}
 
-
-
+#desc div {
+	height: 100%;
+}

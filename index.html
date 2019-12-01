@@ -6,15 +6,21 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<div>4</div>
+	<div>0</div>
 
 	<div id="wrapper">
+		<!-- SECTION 1: ABOUT ME -->
 		<div class="sections flex">
 			<div class="flex column">
 				<h1>ABOUT ME</h1>
 			</div>
 			<div class="side-img"></div>
 		</div>
+		<!-- SECTION 2: EDUCATION / EXPERIENCE -->
+		<div class="sections flex">
+			
+		</div>
+		<!-- SECTION 3: SKILLS -->
 		<div id="skills" class="sections flex">
 			<div class="flex column">
 				<h1>SKILLS</h1>
@@ -189,7 +195,7 @@
 									<div class="skill">
 										<h3>Windows</h3>
 										<div class="skill-bar">
-											<div class="bars">95</div>
+											<div class="bars">90</div>
 										</div>
 									</div>
 									<div class="skill">
@@ -205,13 +211,22 @@
 				</div>
 			</div>
 		</div>
-		<div id="education" class="sections flex">
-			<div class="side-img"></div>
-			<div class="flex column">
-				<h1>EDUCATION</h1>
-			</div>
-		</div>
+		<!-- SECTION 4: PROJECTS -->
 		<div class="sections flex">
+			<div id="desc">
+				<div style="background-color: blue;">
+					<p>Brain Damaged Space Mechs</p>
+				</div>
+				<div style="background-color: red; display: none;">
+					<p>Brain Damaged Spicy ModernWarfare</p>
+				</div>
+				<div style="background-color: purple; display: none;">
+					<p>laphotolab</p>
+				</div>
+				<div style="background-color: orange; display: none;">
+					<p>FNAC</p>
+				</div>
+			</div>
 			<div class="flex column">
 				<h1>PROJECTS</h1>
 				<div id="projects-showcase" class="flex column">
@@ -223,10 +238,11 @@
 						<div class="project-img"></div>
 						<div class="project-img"></div>
 					</div>
+					<div id="more">More to come...</div>
 				</div>
 			</div>
-			<div id="desc"></div>
 		</div>
+		<!-- SECTION 5: CONTACT ME -->
 		<div id="contact" class="sections flex column">
 			<h1>CONTACT</h1>
 			<div class="flex row">
@@ -237,6 +253,7 @@
 						<label for="name">Name:</label>
 						<input type="text" name="name" placeholder="Enter your name...">
 						<textarea name="message" placeholder="Write your message..." rows="8"></textarea>
+						<button>Send</button>
 					</form>
 				</div>
 				<div class="flex column" id="findme">
