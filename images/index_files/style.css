@@ -155,6 +155,12 @@ textarea {
 	flex: 1;
 }
 
+.inline {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 2.5vh;
+}
+
 .logo {
 	height: 5vh;
 	width: 5vh;
@@ -168,14 +174,11 @@ textarea {
 }
 
 .social-network {
-	display: flex;
 	margin-top: 5vh;
 }
 
-.social-network div:nth-child(2) {
+.social-network .inline:nth-child(2) {
 	margin-left: 1vw;
-	font-size: 2.5vh;
-	align-items: center;
 }
 
 
