@@ -14,6 +14,26 @@ document.addEventListener("DOMContentLoaded", function() {
 	window.addEventListener('wheel', scrollBlock, false)
     window.addEventListener('wheel',firstScroll)
 
+    let inputs = document.querySelectorAll("input,textarea")
+
+    for (let input of inputs) {
+        input.addEventListener("focus",function() {
+            input.style.borderBottom = "solid 3px orange"
+        })
+        input.addEventListener("focusout",function() {
+            input.style.borderBottom = "solid 3px transparent"
+        })      
+    }
+
+
+    let logo_url = ["github","linkedin","fb"]
+    let logos = document.querySelectorAll(".logo")
+
+    for (let index in logos) {
+        logos[index].style.backgroundImage = "url(images/"+logo_url[index]+".png)"
+    }
+
+
 
 })
 

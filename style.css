@@ -39,7 +39,7 @@ h2 {
 
 .sections {
 	height: 100vh;
-	background-color: #282923;
+	background-color: #282828;
 	color: white;
 }
 
@@ -101,3 +101,81 @@ h2 {
 #database {
 	display: contents;
 }
+
+#projects-showcase {
+	padding: 10vh;
+}
+
+.project-img {
+	flex: 1;
+	margin: 10px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#desc {
+	width: 40vw;
+	background-color: green;
+}
+
+#contact-box {
+	flex: 2;
+}
+
+#contact-box form {
+	width: 50%;
+	align-self: center;
+	margin-top: 12vh;
+}
+
+label {
+	font-size: 2.5vh;
+	margin-bottom: 0.3vh;
+}
+
+input,textarea {
+	color: white;
+	font-size: 2vh;
+	background-color: transparent;
+	border: solid 3px transparent;
+	padding-bottom: 0.6vh;
+	margin-bottom: 6vh;
+	transition: all 0.2s ease;
+}
+
+textarea {
+	background-color: #242424;
+}
+
+#findme {
+	flex: 1;
+}
+
+.inline {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 2.5vh;
+}
+
+.logo {
+	height: 5vh;
+	width: 5vh;
+	background-size: contain;
+}
+
+#findme .column {
+	width: 70%;
+	align-self: center;
+}
+
+.social-network {
+	margin-top: 5vh;
+}
+
+.social-network .inline:nth-child(2) {
+	margin-left: 1vw;
+}
+
+
+
+
