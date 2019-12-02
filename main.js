@@ -18,25 +18,47 @@ document.addEventListener("DOMContentLoaded", function() {
     formDesign()
     loadProjects()
     loadContactLogos()
+    loadRef()
 
 })
 
+function loadRef() {
+    let refs = document.querySelectorAll(".ref-img")
+    let img_url = ["ref1","ref2"]
+
+    for (let i in img_url) {
+        refs[i].style.backgroundImage = "url(images/"+img_url[i]+".png)"
+    }
+}
+
 function loadProjects() {
-    let projects = document.querySelectorAll(".project-img")
-    let descs = document.querySelectorAll("#desc div")
+    let projects = document.querySelectorAll(".project-logo")
+    let projectimgs = document.querySelectorAll(".project-img")
+    let descs = document.querySelectorAll(".project-desc")
     let img_url = ["bdsm","bdsmw","laphotolab","fnac"]
 
-    for (let index in img_url) {
-        projects[index].style.backgroundImage = "url(images/"+img_url[index]+".png)"
-        
-        projects[index].addEventListener("click", function() {
-            // console.log(descs[index])
+    for (let i in img_url) {
+        projects[i].style.backgroundImage = "url(images/"+img_url[i]+".png)"
+
+        projects[i].addEventListener("click", function() {
+            // console.log(descs[i])
             for (let desc of descs) {
                 desc.style.display = "none"
             }
-            descs[index].style.display = "block"
+            descs[i].style.display = "flex"
         })
     }
+    for (let desc of descs) {
+        desc.style.display = "none"
+    }
+    descs[0].style.display = "flex"
+
+    img_url = ["bdsmig","bdsmwig","laphotolab","laphotolab"]
+
+    for (let i in img_url) {
+        projectimgs[i].style.backgroundImage = "url(images/"+img_url[i]+".png)"
+    }
+
 }
 
 function formDesign() {
@@ -55,9 +77,9 @@ function loadContactLogos() {
     let logo_url = ["github","linkedin","fb"]
     let logos = document.querySelectorAll(".logo")
 
-    for (let index in logos) {
-        if (logos[index].nodeType == 1) {
-            logos[index].style.backgroundImage = "url(images/"+logo_url[index]+".png)"
+    for (let i in logos) {
+        if (logos[i].nodeType == 1) {
+            logos[i].style.backgroundImage = "url(images/"+logo_url[i]+".png)"
         } else {
             return
         }
@@ -72,16 +94,16 @@ function scrollBlock(event) {
 	for (let section of document.querySelectorAll(".sections")) {
 		divpos.push(section)
 	}
-	let index = parseFloat(currentdiv.innerHTML) + dir
-	if (index >= divpos.length) {
-		index = divpos.length-1
-	} else if (index < 0) {
-		index = 0
+	let i = parseFloat(currentdiv.innerHTML) + dir
+	if (i >= divpos.length) {
+		i = divpos.length-1
+	} else if (i < 0) {
+		i = 0
 	}
 
-	currentdiv.innerHTML = index
+	currentdiv.innerHTML = i
 
-    if (index == 2 && document.querySelector(".bars").innerText != "") {
+    if (i == 2 && document.querySelector(".bars").innerText != "") {
         for (let bar of document.querySelectorAll(".bars")) {
             setTimeout(function() {
                 bar.style.width = bar.innerHTML * bar.parentNode.offsetWidth / 100 + "px"
@@ -90,12 +112,12 @@ function scrollBlock(event) {
         }
     }
     //-------------OU---------------
-    // if (index == 2) {
+    // if (i == 2) {
     //     for (let bar of document.querySelectorAll(".bars")) {
     //         setTimeout(function() {
     //             bar.style.width = bar.innerHTML * bar.parentNode.offsetWidth / 100 + "px"
     //             //bar.innerHTML = ""
-    //             bar.style.color = "orange"
+    //             bar.style.color = bar.style.backgroundColor
     //         },230)
     //     }
     // } else {
@@ -104,11 +126,11 @@ function scrollBlock(event) {
     //     }
     // }
 
-	window.scrollTo(0,divpos[index].offsetTop)
+	window.scrollTo(0,divpos[i].offsetTop)
 
 	setTimeout(function() {
 		window.addEventListener('wheel', scrollBlock, false)
-	}, 400)
+	}, 250)
 	window.removeEventListener('wheel', scrollBlock, false)
 }
 

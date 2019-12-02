@@ -12,7 +12,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: LouisGeorgeCafe;
-	list-style: none;
+	/*list-style: none;*/
 	scroll-behavior: smooth;
 	text-decoration: none;
 	color: white;
@@ -30,6 +30,7 @@ h1 {
 	align-self: center;
 	margin-top: 2vh;
 	font-size: 8.5vh;
+	box-shadow: 0 5px #ff8300;
 }
 
 h2 {
@@ -69,6 +70,14 @@ button:hover {
 	box-shadow: 5px 5px #202020;
 }
 
+input:focus, input:hover {
+	background-color: #242424;
+}
+
+p {
+	font-size: 2vh;
+}
+
 
 #wrapper {
 	display: flex;
@@ -82,7 +91,7 @@ button:hover {
 
 .side-img {
 	background-color: blue;
-	width: 32vw;
+	flex: 2;
 }
 
 .flex {
@@ -124,7 +133,7 @@ button:hover {
 
 .bars {
 	border-radius: 5px;
-	background-color: orange;
+	background-color: #f4f41a;
 	height: 100%;
 	transition: all 0.9s cubic-bezier(.17,.84,.44,1);
 	width: 0;
@@ -142,7 +151,7 @@ button:hover {
 	padding: 10vh;
 }
 
-.project-img {
+.project-logo {
 	flex: 1;
 	margin: 10px;
 	background-size: contain;
@@ -151,7 +160,7 @@ button:hover {
 }
 
 #desc {
-	width: 36vw;
+	width: 25vw;
 	padding: 2vw;
 	background-color: green;
 }
@@ -171,15 +180,20 @@ button:hover {
 }
 
 .logo {
-	height: 5vh;
-	width: 5vh;
+	height: 4vh;
+	width: 4vh;
 	background-size: contain;
 }
 
 #findme .column {
 	width: 70%;
 	align-self: center;
-	margin-top: 5vh;
+}
+
+#findme h2 {
+	margin-top: 6vh;
+	align-self: baseline;
+
 }
 
 .social-network {
@@ -189,7 +203,7 @@ button:hover {
 
 .social-network div:nth-child(2) {
 	margin-left: 1vw;
-	font-size: 2.5vh;
+	font-size: 2vh;
 	align-items: center;
 }
 
@@ -198,6 +212,126 @@ button:hover {
 	text-align: right;
 }
 
-#desc div {
+.project-desc {
 	height: 100%;
+}
+
+.color {
+	background-color: #009bff;
+}
+
+.database {
+	background-color: #31d531;
+}
+
+.opesys {
+	background-color: #e34643;
+}
+
+.script {
+	background-color: #a91fbd;
+}
+
+.ref-img {
+	height: 8vh;
+	width: 8vh;
+	border-radius: 50%;
+	align-self: center;
+	background-size: cover;
+}
+
+.ref-desc {
+	margin-left: 1vw;
+}
+
+.ref-name {
+	font-size: 2vh;
+	font-weight: bold;
+}
+
+.project-title {
+	font-size: 5vh;
+	font-weight: bold;
+}
+
+.project-subtitle {
+	font-size: 3vh;
+	font-weight: bold;
+	margin-top: 4vh;
+}
+
+.project-text {
+	font-size: 2vh;
+	margin-top: 2vh;
+	text-align: justify;
+}
+
+.project-img {
+	margin-top: 2vh;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#about {
+	padding: 4vh;
+}
+
+#pic-me {
+	background-image: url(images/moi.png); 
+	height: 15vh; 
+	width: 15vh; 
+	border-radius: 50%; 
+	background-size: contain;
+	background-repeat: no-repeat; 
+	margin-left: 1vw;
+}
+
+#me-name {
+	font-size: 4vh;
+	font-weight: bold;
+}
+
+#picname {
+	height: 15vh;
+}
+
+#me-short {
+	align-self: center;
+	margin-left: 1vw;
+}
+
+#me-job {
+	font-size: 2.5vh;
+}
+
+#me-desc {
+	margin-top: 5vh;
+	font-size: 2vh;
+	text-align: justify;
+}
+
+#me {
+	align-self: center;
+}
+
+#left-pannel {
+	flex: 5;
+}
+
+.one {
+	flex: 1;
+}
+
+#hobbies {
+	align-self: center;
+	padding-left: 14vh;
+}
+
+#hobbies h2 {
+	margin-bottom: 2vh;
+}
+
+li {
+	font-size: 3vh;
+	margin-top: 2vh;
 }
