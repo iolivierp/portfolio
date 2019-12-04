@@ -1,4 +1,6 @@
 
+var currdiv = 1
+
 document.addEventListener("DOMContentLoaded", function() {
     
     //TO DELETE
@@ -6,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let section of document.querySelectorAll(".sections")) {
         divpos.push(section.offsetTop)
     }
-    window.scrollTo(0,divpos[document.querySelector("div").innerHTML])
+    window.scrollTo(0,divpos[currdiv])
 
 
     // may be useless...
@@ -15,12 +17,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	window.addEventListener('wheel', scrollBlock, false)
     
-    formDesign()
+    loadInterests()
     loadProjects()
     loadContactLogos()
     loadRef()
+    formDesign()
 
 })
+
+function loadInterests() {
+    let interest_img = document.querySelectorAll("#interests-pics div")
+    let interest_desc = document.querySelectorAll("#interests-desc div")
+    let img_url = ["reading","playing","music","old"]
+
+    for (let i in img_url) {
+        interest_img[i].style.backgroundImage = "url(images/"+img_url[i]+".jpg)"
+
+        interest_img[i].addEventListener("mouseenter", function() {
+            for (let desc of interest_desc) {
+                desc.style.display = "none"
+            }
+            interest_desc[i].style.display = "flex"
+        })
+    }
+
+    interest_desc[0].style.display = "flex"
+
+}
 
 function loadRef() {
     let refs = document.querySelectorAll(".ref-img")
@@ -35,28 +58,28 @@ function loadProjects() {
     let projects = document.querySelectorAll(".project-logo")
     let projectimgs = document.querySelectorAll(".project-img")
     let descs = document.querySelectorAll(".project-desc")
-    let img_url = ["bdsm","bdsmw","laphotolab","fnac"]
+    let img_url = ["bdsm","bdsmw","laphotolab","fnaclogo"]
 
     for (let i in img_url) {
         projects[i].style.backgroundImage = "url(images/"+img_url[i]+".png)"
 
         projects[i].addEventListener("click", function() {
-            // console.log(descs[i])
             for (let desc of descs) {
                 desc.style.display = "none"
             }
             descs[i].style.display = "flex"
         })
     }
-    for (let desc of descs) {
-        desc.style.display = "none"
-    }
     descs[0].style.display = "flex"
 
-    img_url = ["bdsmig","bdsmwig","laphotolab","laphotolab"]
+    img_url = ["bdsmig","bdsmwig","laphotolab","fnac"]
 
     for (let i in img_url) {
         projectimgs[i].style.backgroundImage = "url(images/"+img_url[i]+".png)"
+
+        // projectimgs[i].addEventListener("click", function() {
+
+        // })
     }
 
 }
@@ -88,22 +111,19 @@ function loadContactLogos() {
 
 function scrollBlock(event) {
 	let dir = event.deltaY / Math.abs(event.deltaY)
-	let currentdiv = document.querySelector("div")
+    currdiv += dir
 	let divpos = []
 
 	for (let section of document.querySelectorAll(".sections")) {
 		divpos.push(section)
 	}
-	let i = parseFloat(currentdiv.innerHTML) + dir
-	if (i >= divpos.length) {
-		i = divpos.length-1
-	} else if (i < 0) {
-		i = 0
+	if (currdiv >= divpos.length) {
+		currdiv = divpos.length-1
+	} else if (currdiv < 0) {
+		currdiv = 0
 	}
 
-	currentdiv.innerHTML = i
-
-    if (i == 2 && document.querySelector(".bars").innerText != "") {
+    if (currdiv == 2 && document.querySelector(".bars").innerText != "") {
         for (let bar of document.querySelectorAll(".bars")) {
             setTimeout(function() {
                 bar.style.width = bar.innerHTML * bar.parentNode.offsetWidth / 100 + "px"
@@ -111,22 +131,8 @@ function scrollBlock(event) {
             },230)
         }
     }
-    //-------------OU---------------
-    // if (i == 2) {
-    //     for (let bar of document.querySelectorAll(".bars")) {
-    //         setTimeout(function() {
-    //             bar.style.width = bar.innerHTML * bar.parentNode.offsetWidth / 100 + "px"
-    //             //bar.innerHTML = ""
-    //             bar.style.color = bar.style.backgroundColor
-    //         },230)
-    //     }
-    // } else {
-    //      for (let bar of document.querySelectorAll(".bars")) {
-    //             bar.style.width = 0
-    //     }
-    // }
 
-	window.scrollTo(0,divpos[i].offsetTop)
+	window.scrollTo(0,divpos[currdiv].offsetTop)
 
 	setTimeout(function() {
 		window.addEventListener('wheel', scrollBlock, false)
