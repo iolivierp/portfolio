@@ -93,6 +93,9 @@ i {
 	color: black;
 }
 
+a b {
+	color: orange;
+}
 
 #wrapper {
 	display: flex;
@@ -167,6 +170,14 @@ i {
 	padding: 10vh;
 }
 
+#projects {
+	background-color: white;
+}
+
+#projects h1 {
+	color: black;
+}
+
 .project-logo {
 	flex: 1;
 	margin: 10px;
@@ -176,13 +187,13 @@ i {
 }
 
 #desc {
-	width: 25vw;
+	width: 30vw;
 	padding: 2vw;
-	background-color: green;
+	background-color: #282828;
 }
 
 #contact-box {
-	flex: 2;
+	width: 60%;
 }
 
 #contact-box form {
@@ -192,24 +203,23 @@ i {
 }
 
 #findme {
-	flex: 1;
+	width: 40%;
+	background-color: white;
+}
+
+#findme div, #findme h1 {
+	color: black;
 }
 
 .logo {
-	height: 4vh;
-	width: 4vh;
+	height: 5vh;
+	width: 5vh;
 	background-size: contain;
 }
 
 #findme .column {
 	width: 70%;
 	align-self: center;
-}
-
-#findme h2 {
-	margin-top: 6vh;
-	align-self: baseline;
-
 }
 
 .social-network {
@@ -219,13 +229,14 @@ i {
 
 .social-network div:nth-child(2) {
 	margin-left: 1vw;
-	font-size: 2vh;
+	font-size: 3vh;
 	align-items: center;
 }
 
 #more {
 	font-size: 4vh;
 	text-align: right;
+	color: black;
 }
 
 .project-desc {
@@ -261,12 +272,16 @@ i {
 	margin-left: 1vw;
 }
 
-.ref-desc div {
-	font-size: 2vh;
+#first-ref {
+	margin-top: 5vh;
+}
+
+.ref-desc div:nth-child(2) {
+	font-size: 2vh; 
 }
 
 .ref-name {
-	font-size: 2.5vh;
+	font-size: 3vh;
 	font-weight: bold;
 }
 
@@ -275,10 +290,14 @@ i {
 	font-weight: bold;
 }
 
-.project-subtitle {
+.project-subtitle p {
 	font-size: 3vh;
 	font-weight: bold;
 	margin-top: 3vh;
+}
+
+.project-subtitle b {
+	color: orange;
 }
 
 .project-text {
@@ -314,8 +333,10 @@ i {
 	margin-left: 1vw;
 }
 
-#me-job {
+#me-job p {
 	font-size: 2.5vh;
+	color: orange;
+	font-weight: bold;
 }
 
 .one {
@@ -337,7 +358,7 @@ li {
 
 .edu-title {
 	font-size: 3.5vh;
-	margin-top: 10vh;
+	margin-top: 12vh;
 	font-weight: bold;
 	align-self: center;
 }
@@ -401,6 +422,10 @@ li {
 	color: black;
 }
 
+.desc b {
+	color: black;
+}
+
 #education {
 	width: 35%;
 }
@@ -421,12 +446,12 @@ li {
 }
 
 #interests-pics {
-	height: 50%;
+	height: 45%;
 }
 
 #interests-desc {
-	height: 30%;
-	width: 60%;
+	height: 35%;
+	width: 35vw;
 	margin-top: 2vh;
 	align-self: center;
 }

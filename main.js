@@ -1,5 +1,5 @@
 
-var currdiv = 1
+var currdiv = 0
 
 document.addEventListener("DOMContentLoaded", function() {
     
@@ -58,7 +58,7 @@ function loadProjects() {
     let projects = document.querySelectorAll(".project-logo")
     let projectimgs = document.querySelectorAll(".project-img")
     let descs = document.querySelectorAll(".project-desc")
-    let img_url = ["bdsm","bdsmw","laphotolab","fnaclogo"]
+    let img_url = ["bdsm","bdsmw","laphotolab","escalapp"]
 
     for (let i in img_url) {
         projects[i].style.backgroundImage = "url(images/"+img_url[i]+".png)"
@@ -72,7 +72,7 @@ function loadProjects() {
     }
     descs[0].style.display = "flex"
 
-    img_url = ["bdsmig","bdsmwig","laphotolab","fnac"]
+    img_url = ["bdsmig","bdsmwig","laphotolab2"]
 
     for (let i in img_url) {
         projectimgs[i].style.backgroundImage = "url(images/"+img_url[i]+".png)"
