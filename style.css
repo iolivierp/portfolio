@@ -300,10 +300,22 @@ a b {
 	color: orange;
 }
 
+.project-subtitle a {
+	color: orange;
+}
+
 .project-text {
 	font-size: 2vh;
 	margin-top: 2vh;
 	text-align: justify;
+}
+
+.project-company {
+	font-size: 2.5vh;
+}
+
+.project-company a {
+	color: orange;
 }
 
 .project-img {
@@ -470,4 +482,3 @@ li {
 	align-self: center;
 	margin: 3vh 0 1.5vh 0; 
 }
-
